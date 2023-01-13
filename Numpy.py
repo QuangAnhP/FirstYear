@@ -1,3 +1,4 @@
+print("\033c")
 # Create an array with specified data type and dimension; Change data type:
 
 import numpy as np
@@ -75,4 +76,42 @@ arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
 
 for idx, x in np.ndenumerate(arr):
   print(idx, x)                         # (Posion in dimesion 1, position in dimesion 2,...) value
+
+# Joining arrays:
+print()
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+arr3 = np.array([[1, 2], [3, 4]])
+arr4 = np.array([[5, 6], [7, 8]])
+
+new_arr1 = np.concatenate((arr1, arr2))         #axis = 0 | <=> hstack()
+print(new_arr1)
+
+new_arr2 = np.concatenate((arr3, arr4), axis = 0)
+print(new_arr2)
+
+new_arr3 = np.concatenate((arr3, arr4), axis = 1)     
+print(new_arr3)
+
+new_arr4 = np.stack((arr1, arr2))               # <=> vstack()
+print(new_arr4)
+
+new_arr5 = np.stack((arr1, arr2), axis = 1)     # <=> dstack()
+print(new_arr5)
+
+# Spliting arrays:
+print()
+
+new_arr1 = np.array_split(arr1, 2)                    # splite(name of spliting array, number of splits)
+print(new_arr1)
+
+new_arr2 = np.array_split(arr1, 3)
+print(new_arr2)
+print(new_arr2[0])
+print(new_arr2[1])
+print(new_arr2[2])
+
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+newarr = np.array_split(arr, 3, axis=1)             # <=> hsplit(arr, 3)
+print(newarr)
 
