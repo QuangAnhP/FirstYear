@@ -115,3 +115,56 @@ arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16
 newarr = np.array_split(arr, 3, axis=1)             # <=> hsplit(arr, 3)
 print(newarr)
 
+# Search:
+print()
+arr = np.array([1, 2, 3, 4, 5, 4, 4])
+
+x = np.where(arr == 4)                        # return positions us tuple
+y = np.where(arr % 2 == 0)                    # return positions of even number
+print(x)
+print(y)
+
+    # Search sorted: return the value to insert a value so the list is still in sorted order
+print()
+arr = np.array([6, 7, 8, 9])
+
+x = np.searchsorted(arr, 7, side='right')     # default side is left (start counting index from left)
+y = np.searchsorted(arr, [1, 3, 7, 8])        # return tuple of position
+print(x)
+print(y)
+
+# Sort:
+print()
+arr1 = np.array([[4, 2, 1], [5, 9, 3]])         # Also works with str and boo(False -> True) | All arrays are sorted
+print(np.sort(arr1))
+
+# Filter:
+    # The manual way: 
+print()
+arr = np.array([41, 42, 43, 44])
+x = [True, False, True, False]  # manually giving T/F values.
+
+newarr = arr[x]
+print(newarr)
+
+    # The normal way:
+arr = np.array([41, 42, 43, 44])
+filter_arr = []
+
+for element in arr:
+  if element > 42:
+    filter_arr.append(True)
+  else:
+    filter_arr.append(False)
+
+newarr = arr[filter_arr]
+print(filter_arr)
+print(newarr)
+
+    # The better way:
+arr = np.array([41, 42, 43, 44])
+filter_arr = arr > 42
+
+newarr = arr[filter_arr]
+print(filter_arr)
+print(newarr)
