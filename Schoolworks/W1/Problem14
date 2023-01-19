@@ -1,0 +1,10 @@
+print("\033c")
+
+print()
+principal = float(
+    input("Please enter the principal amount of your saving account: "))
+rate = float(input("Please enter the interest rate : "))
+age = float(
+    input("Please enter the number of years since the account was first opened: "))
+total = principal * rate * age
+print("The total amount in your saving account is: $", total)

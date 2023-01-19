@@ -1,0 +1,6 @@
+print("\033c")
+
+print()
+Ctemp = float(input("Please enter a temperature in Celcuis: "))
+Ftemp = Ctemp * 9/5 + 32
+print("The temperature in Farenheit is", Ftemp)

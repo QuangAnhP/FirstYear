@@ -1,0 +1,21 @@
+print("\033c")
+feet = float(input("Enter the first value in feets: "))
+inches = float(input("Enter the second value in inches: "))
+total_inches = feet * 12 + inches                             # converting both value to inches
+centi = 2.54 * total_inches         
+meters = 0                       
+
+while centi >= 100:                                    # converting excess centimeters to meters
+    centi -= 100
+    meters += 1
+
+if meters >= 2:                                        # printing 
+    if centi >= 2:
+        print("The same lenght in meters and centimeters is ", meters, "meters and ", centi, "centimeters." )
+    else:
+        print(f"The same lenght in meters and centimeters is {meters} meters and {centi} centimeter.")
+else:
+    if centi >= 2:
+        print(f"The same lenght in meters and centimeters is {meters} meter and {centi} centimeters.")
+    else:
+        print(f"The same lenght in meters and centimeters is {meters} meter and {centi} centimeter.")

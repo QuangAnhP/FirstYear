@@ -1,0 +1,28 @@
+print("\033c")
+
+toonie = loonie = quarter = dime = nickle = penny = 0
+
+value = float(input("Enter the amount of money: "))
+while value >= 2:                              # Alt: value // 2 for better first step
+    toonie += 1
+    value -= 2
+while value >= 1:
+    loonie += 1
+    value -= 1
+while value >= 0.25:
+    quarter += 1
+    value -= 0.25
+while value >= 0.10:
+    dime += 1
+    value -= 0.10
+while value >= 0.05:
+    nickle += 1
+    value -= 0.05
+while value >= 0.01:
+    penny += 1
+    value -= 0.01
+
+if value < 0:
+    print("Invalid amount")
+
+print(f"You have {toonie} toonies, {loonie} loonies, {quarter} quarters, {dime}dimes, {nickle} nickles, and {penny} pennies")

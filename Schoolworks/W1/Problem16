@@ -1,0 +1,32 @@
+print("\033c")
+
+decimal = int(input("Enter a non-negative integer in the range of [0, 255]: "))
+byte = [0, 0, 0, 0, 0, 0, 0, 0]
+
+while decimal >= 128:
+    byte[0] += 1
+    decimal -= 128
+while decimal >= 64:
+    byte[1] += 1
+    decimal -= 64
+while decimal >= 32:
+    byte[2] += 1
+    decimal -= 32
+while decimal >= 16:
+    byte[3] += 1
+    decimal -= 16
+while decimal >= 8:
+    byte[4] += 1
+    decimal -= 8
+while decimal >= 4:
+    byte[5] += 1
+    decimal -= 4
+while decimal >= 2:
+    byte[6] += 1
+    decimal -= 2
+while decimal >= 1:
+    byte[7] += 1
+    decimal -= 1
+    
+result = int("".join([str(x) for x in byte]))
+print(result)

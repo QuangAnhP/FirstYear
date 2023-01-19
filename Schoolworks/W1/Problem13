@@ -1,0 +1,10 @@
+print("\033c")
+
+print()
+print("Assume the quadratic equation looks like this: ax^2 + bx + c = 0")
+a = float(input("Please enter the value for a: "))
+b = float(input("Please enter the value for b: "))
+c = float(input("Please enter the value for c: "))
+
+dis = b**2 - 4 * a * c
+print("The discriminant of that quadratic equation is", dis)
