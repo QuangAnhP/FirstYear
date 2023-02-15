@@ -1,0 +1,1 @@
+# Compare 2 strings(smaller or larger) (check Theory.py)
