@@ -6,10 +6,10 @@ name = input("Enter your name: ")
 SayHello("John")
 
 # %%
-def myFunction(a):
+def myfunction(a):
     print("Hello", a)
     return 
-print(myFunction("John"))
+print(myfunction("John"))
 
 # %%
 def minValue(a, b):
@@ -22,14 +22,14 @@ print(minValue(3, 10))
 
 # %% Factorial
 
-def factorial(n):
+def Factorial(n):
     if n == 0:
         return 1
     for i in range(1, n):
         n *= i
     return n
 
-factorial(5)
+Factorial(5)
 
 # %% Print prime numbers:
 
