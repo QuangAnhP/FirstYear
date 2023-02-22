@@ -1,5 +1,5 @@
-print("\033c")
-# Create an array with specified data type and dimension; Change data type:
+
+# %% Create an array with specified data type and dimension; Change data type:
 
 import numpy as np
 x = np.array([1, 2, 3, 4, 5], dtype='f4', ndmin=1)           # 4 bytes float, 1 dimension
@@ -9,13 +9,13 @@ y = x.astype('i')
 print(y)
 print(y.dtype)
 
-# Accesing indexs:
+# %% Accesing indexs:
 
 arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
 print()
 print(arr[0, 1, 2])
 
-# Slicing:
+# %% Slicing:
     # 1D:
 arr = np.array([1, 2, 3, 4, 5, 6, 7])
 print()
@@ -26,7 +26,7 @@ arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
 
 print(arr[0:2, 1:4])  # return from both elements the index 2nd -> 4th
 
-# Copy vs View:
+# %% Copy vs View:
 '''
 Copy: make a new, independent array
 View: use the same array with different name (changes will happen to both)
@@ -34,7 +34,7 @@ To check if arrays own their data:
     name".base": "None" if it owns the data, otherwise original data will be refered
 '''
 
-# Shape and Reshape:
+# %% Shape and Reshape:
 print()
 arr = np.array([[1, 2 , 3 , 4], [5, 6 , 7 , 8]])
 print(arr.shape)                                    # (elements in 1st dimension, elements in 2nd dimenstion, ...)
@@ -44,7 +44,7 @@ print(f"newarr looks like this: {newarr}")          # "reshape" returns a view, 
 
 print(f"Flattened newarr: {newarr.reshape(-1)}")
 
-# Iteration:
+# %% Iteration:
 arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
 
 for x in arr:
@@ -77,7 +77,7 @@ arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
 for idx, x in np.ndenumerate(arr):
   print(idx, x)                         # (Posion in dimesion 1, position in dimesion 2,...) value
 
-# Joining arrays:
+# %% Joining arrays:
 print()
 arr1 = np.array([1, 2, 3])
 arr2 = np.array([4, 5, 6])
@@ -99,7 +99,7 @@ print(new_arr4)
 new_arr5 = np.stack((arr1, arr2), axis = 1)     # <=> dstack()
 print(new_arr5)
 
-# Spliting arrays:
+# %% Spliting arrays:
 print()
 
 new_arr1 = np.array_split(arr1, 2)                    # splite(name of spliting array, number of splits)
@@ -115,7 +115,7 @@ arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16
 newarr = np.array_split(arr, 3, axis=1)             # <=> hsplit(arr, 3)
 print(newarr)
 
-# Search:
+# %% Search:
 print()
 arr = np.array([1, 2, 3, 4, 5, 4, 4])
 
@@ -133,12 +133,12 @@ y = np.searchsorted(arr, [1, 3, 7, 8])        # return tuple of position
 print(x)
 print(y)
 
-# Sort:
+# %% Sort:
 print()
 arr1 = np.array([[4, 2, 1], [5, 9, 3]])         # Also works with str and boo(False -> True) | All arrays are sorted
 print(np.sort(arr1))
 
-# Filter:
+# %% Filter:
     # The manual way: 
 print()
 arr = np.array([41, 42, 43, 44])

@@ -16,7 +16,7 @@ if __name__ == '__main__':
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
 
-# Used in First.py:
+# Used in Theory.py:
 
 class Student:
     def __init__(self, name, major, gpa, is_in_class):
