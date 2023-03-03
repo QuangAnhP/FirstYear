@@ -57,6 +57,7 @@ print(formatint(1234))
 def freq(s):
     alist = [0 for i in range(26)]
     for i in s:
+        # can add condition to check for alphabet-only here
        alist[ord(i) - 97] += 1
     return (alist)
 
