@@ -37,6 +37,20 @@ def formatInt(n):
 n = int(input("Enter a number: "))
 print(formatInt(n))
 
+# %% format int (Alt)
+
+def formatint(n):
+    s=''
+    count = 0
+    while n > 0:
+        count += 1
+        s = str(n % 10) + s
+        n //= 10
+        if count % 3 == 0 and n > 0:
+            s = ',' + s
+    return s
+
+print(formatint(1234))
 
 # %% frequency:
 
