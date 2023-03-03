@@ -38,7 +38,7 @@ n = int(input("Enter a number: "))
 print(formatInt(n))
 
 
-# %% frequency
+# %% frequency:
 
 def freq(s):
     alist = [0 for i in range(26)]
